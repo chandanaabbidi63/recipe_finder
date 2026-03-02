@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amma Recipes | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+    <header class="topbar">
+        <div class="brand-wrap">
+            <h1>👩‍🍳 Amma Recipes</h1>
+            <p>Sign in to save favorite recipes</p>
+        </div>
+        <div class="top-actions">
+            <button id="darkToggle" class="btn ghost">🌙 Theme</button>
+            <a class="btn" href="index.html">Home</a>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="login.html">Login</a>
+    </nav>
+
+    <main class="auth-wrap">
+        <section class="auth-card">
+            <h2>Welcome back 👋</h2>
+            <p class="small">Login with your details to continue your cooking journey.</p>
+
+            <form id="loginForm" class="auth-form">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" required>
+
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Enter password" required minlength="6">
+
+                <button class="primary-btn" type="submit">Login</button>
+            </form>
+
+            <p id="loginMessage" class="success-msg" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Amma Recipes</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

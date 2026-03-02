@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amma Recipes | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+    <header class="topbar">
+        <div class="brand-wrap">
+            <h1>🍲 Amma Recipes</h1>
+            <p>Tasty homemade meals for every mood and time</p>
+        </div>
+        <div class="top-actions">
+            <button id="darkToggle" class="btn ghost">🌙 Theme</button>
+            <a class="btn" href="login.html">Login</a>
+        </div>
+    </header>
+
+    <nav class="site-nav">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to amma's recipee 🍽️</h2>
+            <p>Discover tasty home-style dishes, save favorites, and get cooking guidance instantly.</p>
+            <div class="utility-row">
+                <p id="userGreeting" class="small"></p>
+                <p class="small">Saved recipes: <strong id="savedCount">0</strong></p>
+                <button id="surpriseBtn" class="btn">🎲 Surprise Me</button>
+            </div>
+        </section>
+
+        <section class="controls">
+            <input type="text" id="searchInput" placeholder="Search recipes, ingredients, or category...">
+            <div id="categoryFilters" class="category-filters"></div>
+        </section>
+
+        <section id="recommendedSection" class="personal-card recommendation-box">
+            <h3>🤖 Recommended for you</h3>
+            <p class="small">Smart suggestions based on search, ingredients, cuisine, and cooking time.</p>
+            <div id="recommendedList" class="recommend-list"></div>
+        </section>
+
+        <section class="personal-card recommendation-box">
+            <h3>⭐ Rating & Review Analysis</h3>
+            <p class="small">Track ratings, top recipes, and positive review keywords.</p>
+            <div class="analytics-grid">
+                <div class="analytics-item">
+                    <p class="small">Top 5 rated recipes</p>
+                    <ul id="topRatedList" class="info-list"></ul>
+                </div>
+                <div class="analytics-item">
+                    <p class="small">Most reviewed recipe</p>
+                    <strong id="mostReviewedRecipe">--</strong>
+                </div>
+                <div class="analytics-item">
+                    <p class="small">Top positive keywords</p>
+                    <strong id="positiveKeywords">--</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="personalization">
+            <article class="personal-card">
+                <h3>❤️ Saved Favorite Recipes</h3>
+                <ul id="favoritesPanel" class="info-list"></ul>
+            </article>
+
+            <article class="personal-card">
+                <h3>🕒 Recently Viewed Recipes</h3>
+                <ul id="recentPanel" class="info-list"></ul>
+            </article>
+
+            <article class="personal-card full-width">
+                <h3>📅 Weekly Meal Planner</h3>
+                <p class="small">Plan your week by selecting one recipe for each day.</p>
+                <div id="mealPlannerGrid" class="planner-grid"></div>
+            </article>
+        </section>
+
+        <section id="grocerySection" class="personal-card recommendation-box">
+            <h3>🛒 Grocery Cart (Missing Ingredients)</h3>
+            <p class="small">Click “Buy Missing Ingredients” in any recipe to add items here.</p>
+            <p class="small">Pantry available now: <strong id="pantrySummary">--</strong></p>
+            <ul id="groceryCartList" class="info-list"></ul>
+            <p><strong>Total Price: ₹<span id="groceryTotal">0</span></strong></p>
+            <p id="groceryMessage" class="small"></p>
+        </section>
+
+        <section id="storeSection" class="personal-card recommendation-box">
+            <h3>🛍️ Virtual Grocery Store</h3>
+            <p class="small">Browse categories, add products to cart, or buy instantly.</p>
+            <div id="storeCategories" class="category-filters"></div>
+            <div id="storeItems" class="store-grid"></div>
+            <div class="store-cart-box">
+                <h4>Store Cart</h4>
+                <ul id="storeCartList" class="info-list"></ul>
+                <p><strong>Store Total: ₹<span id="storeTotal">0</span></strong></p>
+                <p id="storeMessage" class="small"></p>
+            </div>
+        </section>
+
+        <section id="checkoutSection" class="personal-card recommendation-box">
+            <h3>💳 Payment Simulation</h3>
+            <p class="small">Simulate checkout with your grocery + store cart items.</p>
+            <button id="reviewCheckoutBtn" class="btn">Review Cart for Checkout</button>
+            <ul id="checkoutItems" class="info-list"></ul>
+            <p><strong>Checkout Total: ₹<span id="checkoutTotal">0</span></strong></p>
+
+            <label class="small" for="paymentMethod">Select payment method</label>
+            <select id="paymentMethod" class="checkout-select">
+                <option value="">-- Choose payment method --</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Card</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+
+            <button id="placeOrderBtn" class="primary-btn" type="button">Place Simulated Order</button>
+            <p id="orderStatus" class="small"></p>
+            <div id="orderConfirmation" class="order-confirmation"></div>
+        </section>
+
+        <section class="recipes" id="recipeList"></section>
+    </main>
+
+    <footer>
+        <p>© 2026 Amma Recipes • Made with ❤️ for home cooks</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
